@@ -1,0 +1,12 @@
+.page-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  background: #f5f7fb;
+}
+
+.auth-card {
+  width: min(480px, 100%);
+}

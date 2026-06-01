@@ -1,0 +1,24 @@
+<div class="page-shell">
+  <mat-card class="auth-card">
+    <mat-card-header>
+      <mat-card-title>User Profile</mat-card-title>
+      <mat-card-subtitle>Secure account details</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content *ngIf="user$ | async as user; else noUser">
+      <p><strong>Username:</strong> {{ user.username }}</p>
+      <p><strong>Display name:</strong> {{ user.displayName }}</p>
+      <p><strong>Role:</strong> Administrator</p>
+    </mat-card-content>
+
+    <ng-template #noUser>
+      <mat-card-content>
+        <p>Unable to load profile details.</p>
+      </mat-card-content>
+    </ng-template>
+
+    <mat-card-actions>
+      <button mat-stroked-button color="accent" (click)="logout()">Logout</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
