@@ -15,13 +15,19 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Do NOT use the `@HostBinding` and `@HostListener` decorators. Put host bindings inside the `host` object of the `@Component` or `@Directive` decorator instead
 - Use `NgOptimizedImage` for all static images.
   - `NgOptimizedImage` does not work for inline base64 images.
+- Use modern Angular patterns and idiomatic TypeScript.
+- Use observables/RxJS for async streams, multi-source composition, or where cancellation/error propagation is needed; use Promises/async for simple one-off async calls.
+- Use Angular dependency injection rather than manual service construction.
+- Keep templates simple and move complex logic into TypeScript code.
+- Use reactive forms for non-trivial forms.
+- Follow Angular style guide conventions for naming, structure, and modularity.
 
 ## Accessibility Requirements
 
 - It MUST pass all AXE checks.
 - It MUST follow all WCAG AA minimums, including focus management, color contrast, and ARIA attributes.
 
-### Components
+## Components
 
 - Keep components small and focused on a single responsibility
 - Use `input()` and `output()` functions instead of decorators
@@ -52,3 +58,17 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Documentation
+- Document all exported/public classes, methods, functions, and interfaces with JSDoc.
+- Document private helper functions when the purpose or behavior is not obvious.
+- Keep documentation concise, accurate, and useful.
+- Do not add comments that merely restate the code.
+- Update README.md or related documentation when behavior or structure changes.
+
+## Testing
+
+### Frontend Testing
+- Component tests should verify user-visible behavior, not implementation details.
+- Prefer testing public behavior through the DOM and service interactions.
+- Avoid brittle tests tied to CSS structure unless the UI depends on it.
