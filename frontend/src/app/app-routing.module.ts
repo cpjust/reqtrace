@@ -11,6 +11,11 @@ const routes: Routes = [
   { path: '**', redirectTo: 'login' },
 ];
 
+/**
+ * Legacy routing module for the ReqTrace application.
+ * Note: This module is superseded by the standalone {@link routes} configuration and is maintained for backward compatibility.
+ * Configures routes for login and profile pages with authentication protection.
+ */
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

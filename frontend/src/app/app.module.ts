@@ -12,6 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './features/login/login.component';
 import { ProfileComponent } from './features/profile/profile.component';
 
+/**
+ * Legacy root module for the ReqTrace application.
+ * Note: This module is superseded by standalone components and is maintained for backward compatibility.
+ * Configures browser platform, animations, forms, routing, and Material Design components.
+ */
 @NgModule({
   imports: [
     BrowserModule,

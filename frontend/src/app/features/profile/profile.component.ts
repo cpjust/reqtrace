@@ -7,6 +7,10 @@ import { MatCardModule } from '@angular/material/card';
 import { AuthService } from '../../core/auth.service';
 import { User } from '../../core/auth.model';
 
+/**
+ * User profile component for the ReqTrace application.
+ * Displays the current user's information and provides logout functionality.
+ */
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -14,6 +18,7 @@ import { User } from '../../core/auth.model';
   imports: [CommonModule, RouterModule, MatCardModule, MatButtonModule],
 })
 export class ProfileComponent {
+  /** Observable stream of the current user. */
   user$: Observable<User | null>;
 
   constructor(
@@ -23,6 +28,9 @@ export class ProfileComponent {
     this.user$ = this.authService.currentUser$;
   }
 
+  /**
+   * Logs out the current user and navigates to the login page.
+   */
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);

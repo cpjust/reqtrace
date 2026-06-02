@@ -8,6 +8,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService } from '../../core/auth.service';
 
+/**
+ * Login component for user authentication in the ReqTrace application.
+ * Provides a login form with username and password fields.
+ * Handles authentication errors and navigation after successful login.
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -23,7 +28,9 @@ import { AuthService } from '../../core/auth.service';
   ],
 })
 export class LoginComponent {
+  /** The reactive form for login inputs. */
   loginForm: FormGroup;
+  /** Flag indicating whether a login error occurred. */
   loginError = false;
 
   constructor(
@@ -37,14 +44,29 @@ export class LoginComponent {
     });
   }
 
+  /**
+   * Getter for the username form control.
+   *
+   * @returns The username form control
+   */
   get username() {
     return this.loginForm.get('username');
   }
 
+  /**
+   * Getter for the password form control.
+   *
+   * @returns The password form control
+   */
   get password() {
     return this.loginForm.get('password');
   }
 
+  /**
+   * Handles form submission for user login.
+   * Validates the form, authenticates the user, and navigates to the profile page on success.
+   * Sets an error flag if authentication fails.
+   */
   onSubmit(): void {
     this.loginError = false;
 
