@@ -60,8 +60,8 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Use the `inject()` function instead of constructor injection
 
 ## Documentation
-- Document all exported/public classes, methods, functions, and interfaces with JSDoc.
-- Document private helper functions when the purpose or behavior is not obvious.
+- Must document all exported/public classes, methods, functions, and interfaces with JSDoc.
+- Should document private helper functions when the purpose or behavior is not obvious.
 - Keep documentation concise, accurate, and useful.
 - Do not add comments that merely restate the code.
 - Update README.md or related documentation when behavior or structure changes.

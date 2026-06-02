@@ -38,7 +38,7 @@ The project includes:
 ## Angular / TypeScript Guidelines
 - See `frontend\AGENTS.md` for detailed Angular and TypeScript guidelines.
 
-## Documentation
+### TypeScript Documentation
 - Document all exported/public classes, methods, functions, and interfaces with JSDoc.
 - Document private helper functions when the purpose or behavior is not obvious.
 - Keep documentation concise, accurate, and useful.
