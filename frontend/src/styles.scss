@@ -32,6 +32,9 @@ body {
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
 
+  // Define a custom CSS variable for the page background color, which can be used in component styles for consistent theming across the application.
+  --page-background: #6e97eb;
+
   // Reset the user agent margin.
   margin: 0;
   height: 100%;
