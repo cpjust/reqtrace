@@ -1,11 +1,35 @@
 You are an expert in React, TypeScript, modern frontend architecture, and accessible web development. Write functional, maintainable, performant, and easy-to-read code following React and TypeScript best practices.
 
-## TypeScript Best Practices
+## JavaScript & JSX Best Practices
 
-- Use strict type checking.
-- Prefer type inference when the type is obvious.
-- Avoid `any`; use `unknown` when the type is uncertain.
-- Prefer small, typed utility functions and explicit interfaces/types for shared data.
+## JavaScript & JSX Best Practices
+
+*   **Organize Pages into Feature Folders:** Give each distinct page or screen its own dedicated folder. Keep the main page file, its unique sub-components, and its specific styles together in that one folder.
+*   **Use PropTypes for Component Inputs:** Since JavaScript lacks a built-in type system, use the `prop-types` library. This ensures components receive the correct data format and warns you in the console if something is wrong.
+*   **Keep State and Data Predictable:** Do not change data types randomly. If a state variable starts as an array, keep it as an array. Never change it to a string or a number later on.
+*   **Prefer Small, Pure Functions:** Keep your logic functions small and separate from your visual layout. Pass data into them explicitly instead of relying on global variables.
+*   **Keep JSX Lean:** Do not put heavy calculations or complex logic inside your `return` statement. Handle the heavy lifting above the `return` so the layout remains clean and easy to read.
+*   **Break Down Large Components:** If a component grows larger than 150 to 200 lines of code, split it into smaller, reusable child components.
+*   **Always Use Unique Keys:** When mapping over an array to display elements (like a list), always provide a unique `key` prop. Avoid using the array index as the key.
+*   **Destructure Props:** Extract your variables at the top of your component. Write `const { title, user } = props;` instead of repeating `props.title` and `props.user` throughout your code.
+*   **Write Clear Component Interfaces:** Document the exact shape of objects and shared data using clear comments (like JSDoc) or a shared configuration file so your team knows what data to expect.
+
+### Recommended Folder Structure Example
+
+```text
+src/
+├── components/          # Shared components used across multiple pages (e.g., Button, Navbar)
+├── pages/               # Feature folders for each specific screen
+│   ├── Login/
+│   │   ├── Login.jsx    # Main page layout for the Login screen
+│   │   ├── LoginForm.jsx# Sub-component used only on this page
+│   │   └── Login.css    # Styles specific to the Login page
+│   └── Dashboard/
+│       ├── Dashboard.jsx
+│       └── StatCard.jsx
+├── App.jsx              # Main app entry where routes are defined
+└── main.jsx
+```
 
 ## React Best Practices
 
