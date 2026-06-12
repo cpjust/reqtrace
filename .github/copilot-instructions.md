@@ -5,7 +5,7 @@ ReqTrace is an open-source requirements management system for traceability, coll
 and impact analysis of requirements expressed as text and diagrams.
 
 The project includes:
-- An Angular frontend (in the `frontend` directory).
+- An React frontend (in the `frontend` directory).
   - Uses Node.js 24 for frontend tooling and build tasks.
 - A Java 21 / Spring Boot backend (in the `backend` directory).
 - PostgreSQL for persistence.
@@ -35,8 +35,8 @@ The project includes:
 - Avoid unnecessary Lombok usage if it obscures clarity.
 - Prefer explicit domain models and DTOs when crossing application boundaries.
 
-## Angular / TypeScript Guidelines
-- See `frontend\AGENTS.md` for detailed Angular and TypeScript guidelines.
+## React / TypeScript Guidelines
+- See `frontend\AGENTS.md` for detailed React and TypeScript guidelines.
 
 ### TypeScript Documentation
 - Document all exported/public classes, methods, functions, and interfaces with JSDoc.
@@ -52,7 +52,7 @@ The project includes:
 - If tests are flaky, mark as flaky in CI, add deterministic seeds or mocks, and require fixing flakiness before merging. Include guidelines for diagnosing flakes.
 - Use mocks only at boundaries.
 - Prefer integration tests where behavior crosses service, API, or persistence layers.
-- For frontend code, write Angular unit tests for components, services, guards, and utilities as appropriate.
+- For frontend code, write React unit tests for components, services, guards, and utilities as appropriate.
 - For backend code, write JUnit-based unit and integration tests as appropriate.
 
 ## Backend Testing
@@ -62,7 +62,7 @@ The project includes:
 
 ## Project Structure
 - Keep the repository organized by major area, such as frontend, backend, docs, and deploy.
-- Put Angular code under the frontend application area.
+- Put React code under the frontend application area.
 - Put Java/Spring Boot code under the backend service area.
 - Put deployment and environment assets under deploy/.
 

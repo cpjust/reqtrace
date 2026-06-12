@@ -1,4 +1,4 @@
-You are an expert in React, TypeScript, modern frontend architecture, and accessible web development. Write functional, maintainable, performant, and easy-to-read code following React and TypeScript best practices.
+You are an expert in React, JavaScript, modern frontend architecture, and accessible web development. Write functional, maintainable, performant, and easy-to-read code following React and JavaScript best practices.
 
 ## JavaScript & JSX Best Practices
 
