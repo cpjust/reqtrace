@@ -35,10 +35,10 @@ The project includes:
 - Avoid unnecessary Lombok usage if it obscures clarity.
 - Prefer explicit domain models and DTOs when crossing application boundaries.
 
-## React / TypeScript Guidelines
-- See `frontend\AGENTS.md` for detailed React and TypeScript guidelines.
+## React / JavaScript Guidelines
+- See `frontend\AGENTS.md` for detailed React and JavaScript guidelines.
 
-### TypeScript Documentation
+### JavaScript Documentation
 - Document all exported/public classes, methods, functions, and interfaces with JSDoc.
 - Document private helper functions when the purpose or behavior is not obvious.
 - Keep documentation concise, accurate, and useful.

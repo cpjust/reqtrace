@@ -36,7 +36,3 @@ npm run build
 - Prefer accessible form controls and semantic HTML.
 - Use reusable hooks and utility functions for shared logic.
 - Write tests around user-visible behavior.
-
-## Project purpose
-
-This React app mirrors the current Angular UI flow for login and profile screens while using React tooling and patterns instead of Angular.
