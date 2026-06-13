@@ -28,6 +28,14 @@ Create a production build:
 npm run build
 ```
 
+## Test
+
+To run the unit tests:
+
+```bash
+npm test
+```
+
 ## React development notes
 
 - Use functional components and hooks.
