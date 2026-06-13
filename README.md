@@ -40,7 +40,7 @@ A typical ReqTrace workflow will look like this:
 
 ReqTrace will use the following stack:
 
-- **Frontend:** Angular
+- **Frontend:** React
 - **Runtime:** Node.js 24
 - **Backend:** Java 21
 - **Framework:** Spring Boot
@@ -52,7 +52,7 @@ This stack is intended to keep the frontend modern and responsive while giving t
 
 The project is expected to grow into a monorepo with separate top-level folders for major components:
 
-- `frontend/` for the Angular application.
+- `frontend/` for the React UI application.
 - `backend/` for the Java / Spring Boot services.
 - `docs/` for design notes, architecture, and usage documentation.
 - `deploy/` for deployment, container, and environment configuration.

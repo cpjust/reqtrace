@@ -5,7 +5,7 @@ ReqTrace is an open-source requirements management system for traceability, coll
 and impact analysis of requirements expressed as text and diagrams.
 
 The project includes:
-- An Angular frontend (in the `frontend` directory).
+- An React frontend (in the `frontend` directory).
   - Uses Node.js 24 for frontend tooling and build tasks.
 - A Java 21 / Spring Boot backend (in the `backend` directory).
 - PostgreSQL for persistence.
@@ -35,20 +35,10 @@ The project includes:
 - Avoid unnecessary Lombok usage if it obscures clarity.
 - Prefer explicit domain models and DTOs when crossing application boundaries.
 
-## Angular / TypeScript Guidelines
-- Use modern Angular patterns and idiomatic TypeScript.
-- Prefer standalone components and feature-based folders for features that contain routes or reusable UI. Use shared modules for utilities and small presentational components.
-- Keep components thin; move business logic into services and helpers.
-- Use strict typing wherever possible.
-- Avoid `any` unless there is no practical alternative.
-- Use observables/RxJS for async streams, multi-source composition, or where cancellation/error propagation is needed; use Promises/async for simple one-off async calls.
-- Use Angular dependency injection rather than manual service construction.
-- Keep templates simple and move complex logic into TypeScript code.
-- Prefer `async` pipes where appropriate.
-- Use reactive forms for non-trivial forms.
-- Follow Angular style guide conventions for naming, structure, and modularity.
+## React / JavaScript Guidelines
+- See `frontend\AGENTS.md` for detailed React and JavaScript guidelines.
 
-## Documentation
+### JavaScript Documentation
 - Document all exported/public classes, methods, functions, and interfaces with JSDoc.
 - Document private helper functions when the purpose or behavior is not obvious.
 - Keep documentation concise, accurate, and useful.
@@ -62,13 +52,8 @@ The project includes:
 - If tests are flaky, mark as flaky in CI, add deterministic seeds or mocks, and require fixing flakiness before merging. Include guidelines for diagnosing flakes.
 - Use mocks only at boundaries.
 - Prefer integration tests where behavior crosses service, API, or persistence layers.
-- For frontend code, write Angular unit tests for components, services, guards, and utilities as appropriate.
+- For frontend code, write React unit tests for components, services, guards, and utilities as appropriate.
 - For backend code, write JUnit-based unit and integration tests as appropriate.
-
-## Frontend Testing
-- Component tests should verify user-visible behavior, not implementation details.
-- Prefer testing public behavior through the DOM and service interactions.
-- Avoid brittle tests tied to CSS structure unless the UI depends on it.
 
 ## Backend Testing
 - Service and repository tests should validate business rules and data access behavior.
@@ -77,7 +62,7 @@ The project includes:
 
 ## Project Structure
 - Keep the repository organized by major area, such as frontend, backend, docs, and deploy.
-- Put Angular code under the frontend application area.
+- Put React code under the frontend application area.
 - Put Java/Spring Boot code under the backend service area.
 - Put deployment and environment assets under deploy/.
 
